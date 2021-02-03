@@ -18,14 +18,15 @@ public class RoopMove : MonoBehaviour
         
     }
 
-    bool m_xPlus = true;
-    bool m_zPlus = false;
-    bool m_x2Plus = false;
-    bool m_z2Plus = false;
+    bool m_xPlus = true;//x座標の始点(スタート)
+    bool m_zPlus = false;//z座標の始点
+    bool m_x2Plus = false;//x座標の終点
+    bool m_z2Plus = false;//z座標の終点
 
     // Update is called once per frame
     void Update()
     {
+        //始点と終点の真偽値を切り替えて、動きを変える
         if (m_xPlus)
         {
             transform.position += new Vector3(moveSpeed * Time.deltaTime, 0f, 0f);
